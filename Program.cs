@@ -1,43 +1,22 @@
 ﻿using System;
 
-namespace ConsoleApp5
+namespace ConsoleApp11
 {
     class Program
     {
         static void Main(string[] args)
         {
-          
-            //ingresar un  numero, y hacer que se muestre un Rombo a partir de este
-            Console.WriteLine("Ingrese cantidad");
-            int lexs = Convert.ToInt16(Console.ReadLine());
-            int i, j, a;
-            int x, y, z;
-            for ( i = 0; i < lexs; i++)
+            Console.WriteLine("Crear programa que escriba la tabla de multiplicar del 1 al 15");
+            int a= 0, b = 1, c = 0, t = 0;// las variable estan definidas de la siguiente manera
+            // a= contador b=valor de la tabla // c= valor por el cual se multiplicara// y t el resultado
+            do
             {
-                for ( j=i; j <lexs; j++)
-                { Console.Write(" ");}
-                for (a = 0; a!=i; a++)
-                {
-                    Console.Write("**");
-                }
-             Console.WriteLine("*");
-            }
-            
-            for (x = 1; x<= lexs; x++)
-            {
-                for ( y = 0; y!=x; y++)
-                {
-                    Console.Write(" ");
-                }
-                for (z=x; z< lexs; z++)
-                {
-                  Console.Write("**");
+                c++;
+                t = b * c;
+                Console.WriteLine(b+"X"+c+"="+t);
+                a++;
 
-                }
-                 Console.WriteLine("*");
-                
-            }
-           
+            } while (a<15);
             Console.ReadKey();
         }
     }
