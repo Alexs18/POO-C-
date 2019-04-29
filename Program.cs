@@ -1,36 +1,44 @@
 ﻿using System;
 
-namespace ConsoleApp6
+namespace ConsoleApp5
 {
     class Program
     {
         static void Main(string[] args)
         {
-
-            //ejercicio 1 crear un programa que pida numeros, vea cual es el mayor de ellos
-            Console.WriteLine("INGRESE CANTIDAD DE VALORES A EVALUAR");
-            int valor = Convert.ToInt32(Console.ReadLine());
-            int mayor = 0;
-            int[] Numero;
-            Numero = new int [valor];
-           
-
-                for (int i = 0; i < valor; i++)
+          
+            //ingresar un  numero, y hacer que se muestre un Rombo a partir de este
+            Console.WriteLine("Ingrese cantidad");
+            int lexs = Convert.ToInt16(Console.ReadLine());
+            int i, j, a;
+            int x, y, z;
+            for ( i = 0; i < lexs; i++)
+            {
+                for ( j=i; j <lexs; j++)
+                { Console.Write(" ");}
+                for (a = 0; a!=i; a++)
                 {
-                    Console.WriteLine("Ingrese un valor"); Numero[i] = Convert.ToInt32(Console.ReadLine());
-
-                    if (Numero[i] > mayor)
-                    {
-                        mayor = Numero[i];
-                    }
+                    Console.Write("**");
+                }
+             Console.WriteLine("*");
+            }
+            
+            for (x = 1; x<= lexs; x++)
+            {
+                for ( y = 0; y!=x; y++)
+                {
+                    Console.Write(" ");
+                }
+                for (z=x; z< lexs; z++)
+                {
+                  Console.Write("**");
 
                 }
-                Console.WriteLine("EL VALOR MAYOR ES " + mayor);
-                Console.ReadKey();
-            
+                 Console.WriteLine("*");
+                
+            }
            
-
-            
+            Console.ReadKey();
         }
     }
 }
