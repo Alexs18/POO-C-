@@ -1,23 +1,23 @@
 ﻿using System;
 
-namespace ConsoleApp10
+namespace ConsoleApp9
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //crea un programa que lea un numero entero positivo, y que escriba 3 columnas, la primera cuenta desde 1 hasta el numero escrito contando de 1 en 1
-            // la segunda de dos en dos y la tercera de 3 en 3
-            Console.WriteLine("INGRESE SU NUMERO"); int lexs = Convert.ToInt32(Console.ReadLine());
-            int a = 0, b=0, c=0,d =0;
+            //ejercicio 7 crear un programa que escriba dos columnas de numeros, en la primera que escriba los numeros del 1 al 100,
+            // en la segunda los numeros del 100 al 1
+            int a=0,b=0,c=101;
             do
             {
-                b++; c = c + 2; d = d+ 3;
-                Console.WriteLine(b + "    " + c + "    " + d + "    ");
+                b++;
+                c--;
+
                 a++;
-            } while (a<lexs);
+                Console.WriteLine(b + "      " + c);
+            } while (a<100);            
             Console.ReadKey();
         }
-
     }
 }
