@@ -1,43 +1,36 @@
 ﻿using System;
 
-namespace ConsoleApp7
+namespace ConsoleApp6
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //crear un programa que lea una factura
-            //1 lea la cantidad //2 introduce precio //termina lectura cantidad sea cero y da el total
-            double t=0;
-            Console.WriteLine("DIGITE CANTIDAD DE PRODUCTOS");int p = Convert.ToInt32(Console.ReadLine());
-            for (int i = 0; i < p; i++)
-            {
 
-            Console.WriteLine("DIGITE NUMERO DE VENTAS"); int V = Convert.ToInt32(Console.ReadLine());
+            //ejercicio 1 crear un programa que pida numeros, vea cual es el mayor de ellos
+            Console.WriteLine("INGRESE CANTIDAD DE VALORES A EVALUAR");
+            int valor = Convert.ToInt32(Console.ReadLine());
+            int mayor = 0;
+            int[] Numero;
+            Numero = new int [valor];
+           
 
-            Console.WriteLine("DIGITE EL PRECIO"); double pr = Convert.ToInt32(Console.ReadLine());
+                for (int i = 0; i < valor; i++)
+                {
+                    Console.WriteLine("Ingrese un valor"); Numero[i] = Convert.ToInt32(Console.ReadLine());
 
-            if (V==0)
-            {
-                Console.WriteLine("EJECUCION FINALIZADA");
-
-            }
-            else
-            {
-                t = V * pr;
-                Console.WriteLine("CANTIDAD DE PRODUCTOR ADQUIRIDOS ES  "+ V);
-                Console.WriteLine("PRECIO POR CANTIDAD  "+ pr);
-                    Console.WriteLine("TOTAL A PAGAR " + t);
+                    if (Numero[i] > mayor)
+                    {
+                        mayor = Numero[i];
+                    }
 
                 }
-            }
-            Console.ReadKey();
+                Console.WriteLine("EL VALOR MAYOR ES " + mayor);
+                Console.ReadKey();
+            
+           
 
-
-
-
+            
         }
-
     }
-
 }
