@@ -1,28 +1,23 @@
 ﻿using System;
 
-namespace ConsoleApp14
+namespace ConsoleApp10
 {
     class Program
     {
         static void Main(string[] args)
-            //CREE UN PROGRAMA QUE RECIBA COMO PARAMETRO UN NUMERO ENTERO
-            // Y A PARTIR DE EL CREE UNA PIRAMIDE
         {
-            Console.WriteLine("Ingrese cantidad");
-            int lexs = Convert.ToInt16(Console.ReadLine());
-            int i, j, a;
-           
-            for (i = 0; i < lexs; i++)
+            //crea un programa que lea un numero entero positivo, y que escriba 3 columnas, la primera cuenta desde 1 hasta el numero escrito contando de 1 en 1
+            // la segunda de dos en dos y la tercera de 3 en 3
+            Console.WriteLine("INGRESE SU NUMERO"); int lexs = Convert.ToInt32(Console.ReadLine());
+            int a = 0, b=0, c=0,d =0;
+            do
             {
-                for (j = i; j < lexs; j++)
-                { Console.Write(" "); }
-                for (a = 0; a != i; a++)
-                {
-                    Console.Write("**");
-                }
-                Console.WriteLine("*");
-            }
+                b++; c = c + 2; d = d+ 3;
+                Console.WriteLine(b + "    " + c + "    " + d + "    ");
+                a++;
+            } while (a<lexs);
             Console.ReadKey();
         }
+
     }
 }
