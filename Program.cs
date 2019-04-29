@@ -1,22 +1,28 @@
 ﻿using System;
 
-namespace ConsoleApp9
+namespace ConsoleApp8
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //ejercicio 7 crear un programa que escriba dos columnas de numeros, en la primera que escriba los numeros del 1 al 100,
-            // en la segunda los numeros del 100 al 1
-            int a=0,b=0,c=101;
-            do
-            {
-                b++;
-                c--;
+            //CREAR UN PROGRAMA QUE INGRESE UN NUMERO, Y A PARTIR DE ESE NUMERO CREE UN CUADRADO, SOLAMENTE LOS BORDES.
+            Console.WriteLine("Ingrese cantidad del cuadrado");int c = Convert.ToInt32(Console.ReadLine());
 
-                a++;
-                Console.WriteLine(b + "      " + c);
-            } while (a<100);            
+            for (int i = 0; i <c; i++)
+            {
+                for (int a= 0; a < c; a++) 
+                {
+                    if (i==0||a==0|| a == c - 1|| i == c - 1) 
+                    {
+                        Console.Write("*");   } 
+                    else
+                    {
+                        Console.Write(" "); 
+                    }
+                }
+                Console.WriteLine("");
+            }
             Console.ReadKey();
         }
     }
